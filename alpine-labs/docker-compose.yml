@@ -1,0 +1,9 @@
+services:
+  alpine-labs:
+    build: .
+    container_name: alpine-labs
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
