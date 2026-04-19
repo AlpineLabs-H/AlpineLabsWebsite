@@ -1,12 +1,12 @@
 import { A } from "@solidjs/router";
+import logoUrl from "../assets/logo-blue.svg?url";
 
 export default function Footer() {
   return (
     <footer>
-      <div class="footer-brand">
-        <div class="logo-icon" style="width:20px;height:20px;border-radius:4px;font-size:9px">AL</div>
-        alpine-labs
-      </div>
+      <A href="/" class="footer-brand" aria-label="Alpine Labs home">
+        <img src={logoUrl} alt="" class="footer-logo-mark" width="400" height="223" />
+      </A>
       <ul class="footer-links">
         <li><A href="/products">Products</A></li>
         <li><A href="/#about">About</A></li>
