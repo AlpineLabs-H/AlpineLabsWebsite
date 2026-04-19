@@ -17,7 +17,8 @@ a { color: inherit; text-decoration: none; }
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background-image: linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);
   background-size: 40px 40px;
-  mask-image: radial-gradient(ellipse 90% 40% at 50% 0%,black,transparent);
+  /* Ellipse % radii use width vs height separately, so ultrawide viewports look horizontally “stretched”. vmin keeps the fade proportional to the shorter viewport edge. */
+  mask-image: radial-gradient(circle min(92vmin, 1200px) at 50% -8%, black 0%, transparent 70%);
 }
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
