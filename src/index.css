@@ -8,6 +8,8 @@
   --text: #dde4ed; --muted: #566474; --muted2: #8a9ab0;
   --green: #3de88e; --blue: #4a9eff; --purple: #a78bfa; --amber: #fbbf24;
   --mono: 'DM Mono', monospace; --display: 'DM Sans', system-ui, sans-serif;
+  /* Taller bar so the nav logo can be ~3× the previous 44px-tall mark */
+  --nav-h: 136px;
 }
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: var(--display); overflow-x: hidden; }
@@ -22,19 +24,34 @@ a { color: inherit; text-decoration: none; }
 }
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  height: 52px;
+  height: var(--nav-h);
   border-bottom: 1px solid var(--border);
   background: rgba(7,9,13,0.88); backdrop-filter: blur(14px);
 }
 .nav-inner {
   max-width: 1280px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 2rem; height: 52px;
+  padding: 0 2rem; height: var(--nav-h);
 }
-.nav-logo { display: flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 600; color: var(--text); letter-spacing: -.5px; }
+/* Logo slot ~3× previous width; image ~3× previous 44px height (fits --nav-h) */
+.nav-logo {
+  display: flex; align-items: center; flex-shrink: 0; height: 100%;
+  width: min(29.25rem, 90vw);
+  min-width: min(23.25rem, 82vw);
+  transition: opacity .15s;
+}
+.nav-logo:hover { opacity: .88; }
+.nav-logo-mark {
+  display: block;
+  width: 100%;
+  height: 132px;
+  max-height: calc(var(--nav-h) - 4px);
+  object-fit: contain;
+  object-position: left center;
+}
 .logo-icon { width: 24px; height: 24px; border-radius: 5px; background: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; }
 .nav-links { display: flex; list-style: none; }
-.nav-links a { display: block; padding: 0 13px; height: 52px; line-height: 52px; font-size: 12.5px; font-weight: 500; color: var(--muted2); transition: color .15s; }
+.nav-links a { display: block; padding: 0 13px; height: var(--nav-h); line-height: var(--nav-h); font-size: 12.5px; font-weight: 500; color: var(--muted2); transition: color .15s; }
 .nav-links a:hover { color: var(--text); }
 .nav-links a.active { color: var(--text); }
 .nav-right { display: flex; align-items: center; gap: 8px; }
@@ -64,7 +81,22 @@ nav {
 .sec-sub { font-size: 14px; color: var(--muted2); line-height: 1.7; max-width: 420px; margin-bottom: 3rem; font-family: var(--mono); }
 hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 footer { border-top: 1px solid var(--border); padding: 32px 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; position: relative; z-index: 1; }
-.footer-brand { display: flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: -.3px; }
+.footer-brand {
+  display: flex; align-items: center; flex-shrink: 0;
+  width: min(25.5rem, 92vw);
+  min-width: min(19.5rem, 85vw);
+  transition: opacity .15s;
+}
+.footer-brand:hover { opacity: .88; }
+.footer-logo-mark {
+  display: block;
+  width: 100%;
+  height: 78px;
+  max-height: 84px;
+  object-fit: contain;
+  object-position: left center;
+  opacity: .92;
+}
 .footer-links { display: flex; gap: 1.6rem; list-style: none; }
 .footer-links a { font-size: 12px; color: var(--muted); transition: color .15s; }
 .footer-links a:hover { color: var(--text); }

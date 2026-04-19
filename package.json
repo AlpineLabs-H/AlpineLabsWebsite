@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "favicon": "node scripts/build-favicon.mjs",
     "dev": "vite",
+    "prebuild": "npm run favicon",
     "build": "vite build",
     "preview": "vite preview"
   },

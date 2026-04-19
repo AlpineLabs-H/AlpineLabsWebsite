@@ -1,4 +1,5 @@
 import { A } from "@solidjs/router";
+import logoUrl from "../assets/logo-blue.svg?url";
 
 const GithubIcon = () => (
   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
@@ -10,9 +11,8 @@ export default function Nav() {
   return (
     <nav>
       <div class="nav-inner">
-        <A href="/" class="nav-logo">
-          <div class="logo-icon">AL</div>
-          alpine-labs
+        <A href="/" class="nav-logo" aria-label="Alpine Labs home">
+          <img src={logoUrl} alt="" class="nav-logo-mark" width="400" height="223" />
         </A>
         <ul class="nav-links">
           <li><A href="/products" activeClass="active">Products</A></li>

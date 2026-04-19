@@ -1,5 +1,5 @@
 .pageHeader {
-  padding: 110px 2rem 60px; max-width: 920px; margin: 0 auto;
+  padding: calc(var(--nav-h) + 58px) 2rem 60px; max-width: 920px; margin: 0 auto;
   position: relative; z-index: 1; border-bottom: 1px solid var(--border);
 }
 .breadcrumb {
