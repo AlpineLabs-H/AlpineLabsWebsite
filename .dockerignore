@@ -1,0 +1,14 @@
+# Host node_modules must never overwrite the Linux install in the image
+# (Windows/macOS trees break npm scripts → exit 126 "cannot execute").
+node_modules
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+dist
+.git
+.github
+.cursor
+*.md
+.env
+.env.*
