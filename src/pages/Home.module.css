@@ -1,5 +1,5 @@
 .hero {
-  padding: 138px 2rem 90px;
+  padding: calc(var(--nav-h) + 86px) 2rem 90px;
   max-width: 760px;
   margin: 0 auto;
   position: relative;
