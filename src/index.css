@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;700;800&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-/* Target your main header */
-h1 {
-  font-weight: 900; 
-  letter-spacing: -0.05em; /* This is the magic number for heavy fonts */
-  line-height: 0.95;       /* Pulls the lines closer for a tighter block look */
-}
+
 :root {
   --bg: #07090d; --s1: #0d1117; --s2: #131920; --s3: #1a2333;
   --border: rgba(255,255,255,0.06); --border2: rgba(255,255,255,0.12);
@@ -62,11 +57,9 @@ nav {
 .pill-purple{ background: rgba(167,139,250,0.08); color: rgba(167,139,250,0.85); border-color: rgba(167,139,250,0.15); }
 .pill-amber { background: rgba(251,191,36,0.07); color: rgba(251,191,36,0.8); border-color: rgba(251,191,36,0.12); }
 .section { padding: 80px 2rem; max-width: 960px; margin: 0 auto; position: relative; z-index: 1; }
-
-/* Global page container — prevents stretching on 1080p+ */
 .page-wrap { max-width: 1280px; margin: 0 auto; position: relative; }
 .sec-eyebrow { font-family: var(--mono); font-size: 11px; color: var(--blue); letter-spacing: .1em; text-transform: uppercase; margin-bottom: .8rem; }
-.sec-title { font-size: clamp(26px,4vw,40px); font-weight: 800; letter-spacing: -1.5px; line-height: 1.08; margin-bottom: .9rem; }
+.sec-title { font-size: clamp(24px,2.5vw,36px); font-weight: 800; letter-spacing: -1.2px; line-height: 1.08; margin-bottom: .9rem; }
 .sec-sub { font-size: 14px; color: var(--muted2); line-height: 1.7; max-width: 420px; margin-bottom: 3rem; font-family: var(--mono); }
 hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 footer { border-top: 1px solid var(--border); padding: 32px 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; position: relative; z-index: 1; }
