@@ -9,7 +9,7 @@
 .breadcrumb a { color: var(--muted); transition: color .15s; }
 .breadcrumb a:hover { color: var(--text); }
 .breadcrumb span { opacity: .4; }
-.pageHeader h1 { font-size: clamp(36px,5vw,54px); font-weight: 800; letter-spacing: -2px; line-height: 1.05; margin-bottom: .8rem; }
+.pageHeader h1 { font-size: clamp(36px,5vw,54px); font-weight: 700; letter-spacing: -1.6px; line-height: 1.05; margin-bottom: .8rem; }
 .pageHeader p { font-size: 14px; color: var(--muted2); font-family: var(--mono); line-height: 1.7; max-width: 440px; }
 
 .filterRow {
@@ -43,20 +43,20 @@
 .prodRow:hover { background: var(--s2); }
 
 .prodRowLeft { display: flex; gap: 18px; align-items: flex-start; }
-.prodRowIcon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; font-weight: 800; font-family: var(--display); }
+.prodRowIcon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; font-weight: 700; font-family: var(--display); }
 .piGreen { background: rgba(61,232,142,0.1); color: #3de88e; }
 .piBlue  { background: rgba(74,158,255,0.1); color: #4a9eff; }
 .piMuted { background: var(--s2); color: var(--muted); }
 
 .prodRowInfo {}
 .prodRowTop { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-.prodRowName { font-size: 16px; font-weight: 800; color: var(--text); letter-spacing: -.4px; }
+.prodRowName { font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: -.4px; }
 .prodRowSub { font-size: 11px; color: var(--muted); font-family: var(--mono); }
 .prodRowDesc { font-size: 13px; color: var(--muted2); line-height: 1.65; font-family: var(--mono); margin-bottom: 14px; max-width: 540px; }
 .prodRowTags { display: flex; flex-wrap: wrap; gap: 6px; }
 
 .prodRowRight { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; flex-shrink: 0; }
-.prodRowLink { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; color: var(--blue); white-space: nowrap; transition: gap .15s; }
+.prodRowLink { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--blue); white-space: nowrap; transition: gap .15s; }
 .prodRow:hover .prodRowLink { gap: 8px; }
 .prodRowGh { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; color: var(--muted); font-family: var(--mono); transition: color .15s; }
 .prodRowGh:hover { color: var(--text); }
